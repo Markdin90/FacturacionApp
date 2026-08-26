@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<PreserveCompilationContext>true</PreserveCompilationContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="14.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.25" />
+  </ItemGroup>
+
+  <ItemGroup>    
+    <ProjectReference Include="..\FacturacionApp.Application\FacturacionApp.Application.csproj" />
+    <ProjectReference Include="..\FacturacionApp.Domain\FacturacionApp.Domain.csproj" />
+    <ProjectReference Include="..\FacturacionApp.Infrastructure\FacturacionApp.Infrastructure.csproj" />	  	  
+  </ItemGroup>
+
+</Project>
