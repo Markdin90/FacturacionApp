@@ -1,0 +1,27 @@
+name: CI - Build and Test
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore FacturacionApp/FacturacionApp.sln
+
+      - name: Build
+        run: dotnet build FacturacionApp/FacturacionApp.sln --no-restore --configuration Release
+
+      - name: Run tests
+        run: dotnet test FacturacionApp/FacturacionApp.sln --no-build --configuration Release
