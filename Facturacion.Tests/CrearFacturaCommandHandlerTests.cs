@@ -31,7 +31,8 @@ public class CrearFacturaCommandHandlerTests
         // Arrange
         var command = new CrearFacturaCommand
         {
-            ClienteNombre = "Juan Pérez",
+            //ClienteNombre = "Juan Pérez",
+            ClienteNombre = null,
             ClienteEmail = "juan@test.com",
             Productos = new List<ProductoDto>
             {
