@@ -158,5 +158,7 @@ app.Run();
 //WebAplicationFactory
 public partial class Program { }
 
+//Comentario para que el proyecto compile y se pueda testear con WebApplicationFactory, no tiene otra funcionalidad.
+
 
 
