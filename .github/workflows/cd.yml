@@ -25,7 +25,7 @@ jobs:
         run: dotnet restore FacturacionApp/FacturacionApp.sln
 
       - name: Publish
-        run: dotnet publish FacturacionApp/FacturacionApp.API.csproj --configuration Release --output ./publish
+        run: dotnet publish FacturacionApp/FacturacionApp.csproj --configuration Release --output ./publish
 
       - name: Login to Azure via OIDC
         uses: azure/login@v2
